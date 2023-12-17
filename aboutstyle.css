@@ -1,0 +1,161 @@
+@font-face {
+    font-family: digitalfont;
+    src: url(digital-7.ttf);
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family:digitalfont;
+background-image: url('about.jpg');
+background-color: black;
+background-size: cover;
+/* backdrop-filter: blur(5px); */
+}
+.hidden {
+    display: none;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Send the video to the background */
+}
+
+#startScreen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 25px;
+    height: 200px;
+    color: #fff;
+    width: 94%;
+    z-index: 1000;
+    font-family: digitalfont;
+    font-size: 25pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header:hover{
+    color: rgb(139, 255, 97);
+}
+
+
+#startScreen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#startScreen .content {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    animation: blinkFade 4s infinite; /* Apply the blinkFade animation */
+}
+
+@keyframes blinkFade {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+#startScreen h1,
+#startScreen h2 {
+    margin: 0;
+}
+
+#buttonContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    
+}
+
+#buttonContainer.show {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#buttonContainer a {
+    display: block;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25pt;
+}
+
+
+a {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover{
+    color: rgb(139, 255, 97);
+
+  }
+
+#buttonContainer a:hover {
+    color: rgb(139, 255, 97);
+}
+
+p{
+    margin: 0;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .description{
+      margin: 200px 40px 0px 40px;
+      width: 30%;
+      font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    color: #fff;
+  }
